@@ -7,12 +7,12 @@ import {
   Heading,
   Hr,
   Html,
-  Img,
   Preview,
   Row,
   Section,
   Text,
 } from "@react-email/components";
+import { Check } from "lucide-react";
 
 const OrderReceivedEmail = ({
   shippingAddress,
@@ -23,11 +23,6 @@ const OrderReceivedEmail = ({
   orderId: string;
   orderDate: string;
 }) => {
-  const baseUrl =
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:3000"
-      : "https://caseityourself.vercel.app";
-
   return (
     <Html>
       <Head />
@@ -35,12 +30,12 @@ const OrderReceivedEmail = ({
       <Body style={main}>
         <Container style={container}>
           <Section style={message}>
-            <Img
-              src={`${baseUrl}/snake-3.png`}
-              width="65"
-              height="73"
-              alt="delivery snake"
-              style={{ margin: "auto" }}
+            <Check
+              size={64}
+              style={{
+                margin: "auto",
+                color: "#4CAF50",
+              }}
             />
             <Heading style={global.heading}>Thank you for your order!</Heading>
             <Text style={global.text}>

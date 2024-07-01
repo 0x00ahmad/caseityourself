@@ -9,6 +9,7 @@ import OrderReceivedEmail from "@/components/emails/OrderReceivedEmail";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
+  console.log(`Received webhook event`);
   try {
     const body = await req.text();
     const signature = headers().get("stripe-signature");
