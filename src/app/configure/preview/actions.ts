@@ -70,6 +70,7 @@ export const createCheckoutSession = async ({
     cancel_url: `${process.env.NEXT_PUBLIC_SERVER_URL}/configure/preview?id=${configuration.id}`,
     payment_method_types: ["card", "paypal"],
     mode: "payment",
+    shipping_address_collection: { allowed_countries: ["US", "CA"] },
     metadata: {
       userId: user.id,
       orderId: order.id,
