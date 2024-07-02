@@ -4,11 +4,12 @@ Built with the Next.js 14 App Router, Postgres, TypeScript, Tailwind & Kinde Aut
 
 ## Features
 
-- 🛠️ A complete ecommerce store
+- 🛠️ An ecommerce flow
 - 💳 Admin panel for managing orders
 - 🖥️ file uploads
 - 🌟 Simple and sleek UI
 - 🛒 Completely custom phone case configurator
+- 🔐 Secure checkout with Stripe
 - ✉️ Beautiful thank-you email after purchase
 - ✅ Apple-inspired configuration design
 - ⌨️ 100% written in TypeScript
